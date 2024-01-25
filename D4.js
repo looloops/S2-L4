@@ -104,19 +104,7 @@ console.log(check3and7(firstNum));
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
 */
-/* 
 
-function reverseString(str) {
-  let stringArray = str.split("");
-  for (let i = 0; i < stringArray.length; i++) {
-    stringArray.unshift(stringArray[i]);
-  }
-  console.log(stringArray);
-  return stringArray.join("");
-}
-
-let revStr = "HappyCode everyone";
-console.log(reverseString(revStr)); */
 console.log("ESERCIZIO 7");
 
 function reverseString(str) {
@@ -125,7 +113,8 @@ function reverseString(str) {
 }
 
 let revStr = "HappyCode everyone";
-console.log(reverseString(revStr));
+revStr = reverseString(revStr);
+console.log(revStr);
 
 /* ESERCIZIO 8
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
