@@ -104,34 +104,87 @@ console.log(check3and7(firstNum));
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
 */
-
 console.log("ESERCIZIO 7");
+// Metodo lungo:
+
+function reverseString(str) {
+  let stringArray = str.split("");
+  let reversedArray = [];
+  for (let i = 0; i < stringArray.length; i++) {
+    reversedArray.unshift(stringArray[i]);
+  }
+  console.log(stringArray);
+  return reversedArray.join("");
+}
+
+let revStr1 = "HappyCode everyone";
+console.log(reverseString(revStr1));
+
+//Metodo con reverse
 
 function reverseString(str) {
   let stringArray = str.split("").reverse("").join("");
   return stringArray;
 }
 
-let revStr = "HappyCode everyone";
-revStr = reverseString(revStr);
-console.log(revStr);
+let revStr2 = "HappyCode everyone";
+revStr2 = reverseString(revStr2);
+console.log(revStr2);
 
 /* ESERCIZIO 8
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
  La funzione deve rendere maiuscola la prima lettera di ogni parola contenuta nella stringa.
 */
+console.log("ESERCIZIO 8");
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function upFirst(str) {
+  for (let b = 0; b < str.length; b++) {
+    let firstCharUpperCase = str[b][0].toUpperCase();
+    str[b] = str[b].replace(str[b][0], firstCharUpperCase);
+  }
+
+  return str.join(" ");
+}
+
+let originalString = "ma come si fa?";
+let arrString = originalString.split(" ");
+console.log(arrString);
+
+console.log(upFirst(arrString));
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
  della stringa originale.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+console.log("ESERCIZIO 9");
+
+function cutString(str) {
+  cutStr = str.substring(1, str.length - 2);
+  return cutStr;
+}
+
+textToCut = "Sunday";
+
+cutText = cutString(textToCut);
+console.log(cutText);
 
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+console.log("ESERCIZIO 10");
+let casualNumbers = [];
+
+function giveMeRandom(n) {
+  i = 1;
+  while (i <= n) {
+    casualNumbers.push(Math.floor(Math.random() * 10));
+    i++;
+  }
+  return casualNumbers;
+}
+
+const howMany = 12;
+giveMeRandom(howMany);
+console.log(casualNumbers);
