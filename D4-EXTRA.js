@@ -6,14 +6,33 @@
  La funzione deve inoltre ritornare la somma di tutti i valori maggiori di 5.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+console.log("EXTRA 1");
+
+console.log("Array di numeri casuali: " + casualNumbers);
+let sum = 0;
+function checkArray(n) {
+  for (let i = 0; i < n.length; i++) {
+    switch (true) {
+      case n[i] > 5:
+        console.log("Il valore " + n[i] + " è maggiore di 5");
+        sum = sum + n[i];
+        break;
+      default:
+        console.log("Il valore " + n[i] + " è minore o uguale a 5");
+    }
+  }
+  return sum;
+}
+
+checkArray(casualNumbers);
+console.log("La somma dei valori maggiorni di 5 è " + sum);
 
 /* EXTRA 2
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
  Crea una funzione chiamata "shoppingCartTotal" che calcola il totale dovuto al negozio (tenendo conto delle quantità di ogni oggetto).
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+console.log("EXTRA 2");
 
 /* EXTRA 3
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
